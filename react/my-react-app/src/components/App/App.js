@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-
 import Header from '../header/Header';
 import Player from '../Player/Player';
 import Aside from '../Aside/Aside';
-
-import logo from '../../logo.png'
+import logo from '../../logo.png';
+import Button from '../Button/Button';
 
 const menuItems = [
   { name: 'Головна', url: '#' },
@@ -41,7 +40,11 @@ function App() {
     <div>
       <Header items={menuItems} logo={logo}/>
       <Player />
-      <Aside data={banners} about={about}/>
+      <Aside data={banners} about={about} />
+      <div className="Center-div">
+        <Button value='Розклад' color='button-red'/>
+        <Button value='Новини' color='button-green' />
+      </div>
     </div>
   )
 }

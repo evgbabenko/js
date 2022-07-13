@@ -27,7 +27,9 @@
 .App-link {
   color: #61dafb;
 }
-
+.Center-div {
+  text-align: center;
+}
 
 @keyframes App-logo-spin {
   from {
