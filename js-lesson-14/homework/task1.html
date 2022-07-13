@@ -1,0 +1,52 @@
+<!--
+Создайте функцию user, сделайте так чтобы функция выводила в консоль контекст
+Создайте обьект userOne, добавьте к нему свойства имя, фамилия, возраст и функцию, которая будет выводить  Привет! Я имя + фамилия  Выведите имя и фамилию пользователя с объекта userOne.
+Сделайте так, чтобы контекст в методе объекта userOne был глобальный объект window.
+Создайте еще один объект userTwo и заполните его теми же свойствами, но без метода.
+Выведите информацию с объекта userTwo используя метод объекта userOne.
+Работа с контекстом(bind call apply) bind call apply
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+    $(user = () => {
+        console.log(this);
+    })
+    user();
+    let userOne = {
+        firstName: 'Иван',
+        lastName: 'Павлов',
+        age: 34,
+        showName() {
+            alert(`Привет! Я ${this.firstName} ${this.lastName}`);
+        }
+    }
+    // обычный вызов метода с стандартным с this
+    userOne.showName();
+
+    // замена this на window
+    let global = userOne.showName.bind(window);
+    global();
+
+    let userTwo = {
+        firstName: 'Павел',
+        lastName: 'Иванов',
+        age: 40
+    }
+    // Вызов информации с объекста userTwo через метод userOne(сбособ 1)
+    userOne.showName.call(userTwo);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr=[];
+        let cloud=' &#9729; <br>';
+        let del=0;
+        while(del<1 || del>15)
+        {
+        del=prompt('Номер элемента для удаления 1-15:',0);
+        }
+        
+            arr=["Боинг-717",
+                "Боинг-737",
+                "Боинг-747",
+                "Боинг-757",
+                "Боинг-767",
+                "Боинг-777",
+                "Боинг-787",
+                "Аэробус Corporate Jetliner",
+                "Аэробус А300 B2/B4/C4",
+                "Аэробус А300-600",
+                "Аэробус А310-200",
+                "Аэробус А310-300",
+                "Аэробус А318",
+                "Аэробус А319",
+                "Аэробус А320"];
+            document.write('Всего элементов: '+arr.length+'<br>');
+            document.write(arr.join(' &#9729; <br>'));
+            document.write('<hr><br>Массив в обратном порядке while:<br>');
+            i=arr.length;
+            while (i>0)
+            {
+                i--;
+                document.write(i+1+'. '+arr[i]+cloud);
+            }
+            /*вариант изенения вывода массива в обратном порадке - создато второй зеркальный массив*/
+            let arr2=arr.reverse(); 
+            document.write('<hr>');
+            document.write('Массив в обратном порядке reverse:<br>');
+            document.write(arr2.join(' &#9729; <br>'));
+           
+            document.write('<hr><br>Удаленный элемент: '+arr.splice(del-1,1)+'<br>');
+            document.write(arr.join(' &#9729; <br>'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

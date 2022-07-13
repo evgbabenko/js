@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+        <h1>Hamburger</h1>
+        
+        <main>
+       
+            <div class="menu">
+                <div>Menu</div>
+                <div></div>
+                <div>Размер</div>
+                <div>Добавка</div>
+                <div>Заправка</div>
+                <div>Маленький <input type="radio" class="burger_size" id="size_small" value="small" name="s"> </div>
+                <div>Большой <input type="radio" class="burger_size" id="size_large" value="large" name="s"> </div>
+                <div>Cheese <input type="radio" class="burger_stuffing" id="stuffing_cheese" value="cheese" name="st"> </div>
+                <div>Potato <input type="radio" class="burger_stuffing" id="stuffing_potato" value="potato" name="st"> </div>
+                <div>Salad <input type="radio" class="burger_stuffing" id="stuffing_salad" value="salad" name="st"> </div>
+                <div>Mayo <input type="checkbox" id="topping_mayo"></div>
+                <div>Spice <input type="checkbox" id="topping_spice"> </div>
+                <div>Цена</div>
+                <div>50</div>
+                <div>100</div>
+                <div>10</div>
+                <div>15</div>
+                <div>20</div>
+                <div>20</div>
+                <div>15</div>
+                <div>Калории</div>
+                <div>20</div>
+                <div>40</div>
+                <div>20</div>
+                <div>10</div>
+                <div>5</div>
+                <div>5</div>
+                <div>0</div>
+            </div>
+        
+            <h2>Choose your hamburger</h2>
+            <div class="param">
+                <div>
+                    <button id="calculate">Calculate price and calories</button>
+                    <p>price: <span class="price"></span></p>
+        
+                    <p>calories: <span class="calories"></span></p>
+                </div>
+        
+                <div>
+                    <button id="all_toppings">Get all toppings</button>
+                    <p>All toppings: <span class="toppings"></span></p>
+                </div>
+                <div>
+                    <button id="get_size">Get size</button>
+                    <p>All toppings: <span class="size"></span></p>
+                </div>
+                <div>
+                    <button id="get_stuffing">Get stuffing</button>
+                    <p>All stuffing: <span class="stuffing"></span></p>
+                </div>
+            </div>
+        </main>
+
+</body>
+</html>

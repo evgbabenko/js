@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <section id="list"></section>
+    <input type="button" value="Добавить" onclick="addDiv()">
+        <script>
+                function addDiv() {
+                    // получение элемента со страницы по значению атрибута id
+                    const list = document.querySelector("#list");
+                    // создание елемента Div на странице
+                    const item = document.createElement("div");
+                    item.innerHTML = `Div element # ${list.children.length+1}`;
+                    // функция, которая создает 10 елементов, а потом удаляет их
+                    if (list.children.length < 10) {
+                        list.appendChild(item);
+                    } else {
+                        while (list.lastChild) {
+                            list.removeChild(list.lastChild);
+                        }
+                    }
+                }
+        </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    font-size: 12px;
+}
+body{
+    font-family: 'Montserrat';
+    color: black;
+    background-color: silver;
+    margin: 0px auto;
+    max-width: 1300px;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    display: inline;
+}
+h2{
+    font-size: 4em;
+    font-weight: 800;
+    text-decoration: dotted;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    display: inline;
+}
+h4 {
+    font-size: 2em;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    display: inline;
+}
+
+header{
+    padding: 30px 30px;
+    background-color: yellowgreen;
+    text-align: center;
+}
+main{
+    padding: 50px 30px;
+    background-color: salmon;
+    text-align: center;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+img{
+    height: 60px;
+    width: 60px;
+    object-fit: scale-down;
+}
+.cash{
+    color: red;
+    font-size: 2em;
+    font-weight: 400;
+    text-decoration: none;
+}
+.coins{
+    background-color: bisque;
+    padding: 30px 30px;
+    min-width: 200px;
+}
+.rate{
+    background-color: chartreuse;
+    padding: 30px 30px;
+    min-width: 300px;
+}
+footer{
+    background-color: blueviolet;
+    padding: 30px 0px;
+    text-align: center;
+    color: white;
+    min-width: 500px;
+}
+button {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 2em;
+    font-weight: 400;
+    padding: 15px 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.playerdiv{
+    position: fixed;
+    bottom: 0px;
+    background-color: black;
+    width: 100%;
+    font-size: smaller;
+}
+
+button{
+    background-color: red;
+    color: antiquewhite;
+    padding: 10px 10px;
+    border-radius: 50px 50px;
+    cursor: pointer;
+}

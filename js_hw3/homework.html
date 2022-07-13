@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let style=['Джаз','Блюз'];
+        document.write(style.join('; '));
+        document.write('<hr>');
+    style.push('Рок-н-Ролл');
+        document.write(style.join('; '));
+        document.write('<hr>');
+    let mid=0;
+    if(style.length%2 == 0)
+    {
+        let mid1=Math.ceil(style.length/2);
+        let mid2=Math.ceil(style.length/2)+1;
+        mid = prompt('Количество элементов в массиве - четное: '+style.length
+        +'\nВозможны два средних значения: \n'+mid1+' - '+style[mid1-1]
+        +'\n'+mid2+' - '+style[mid2-1]
+        +'\nВыберите номер нужного:')
+    }
+    else
+    {
+        mid= Math.ceil(style.length/2);
+    }
+        document.write('Средний элетент: '+mid+': '+style[mid-1]);
+        document.write('<hr>');
+    style[mid-1] = 'Классика';
+        document.write(style.join('; '));  
+    document.write('<hr>Удаленный элемент: '+style.splice(0,1));
+        document.write('<hr>');
+        document.write(style.join('; '));
+    style.unshift('Рєп','Регги');
+        document.write('<hr>');
+        document.write(style.join('; '));
+</script>
+<body>
+    
+</body>
+</html>

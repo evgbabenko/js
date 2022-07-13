@@ -1,0 +1,36 @@
+@font-face {font-family: 'DS-Digital'; src: url('./ds-digital.ttf');}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+body{
+    font-size: 12px;
+    font-family: 'Oswald';
+}
+.stopwatch{
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px 10px;
+    max-width: 400px;
+}
+#stopwatch-display{
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'DS-Digital', arial;
+    font-size: 50px;
+    text-shadow: 4px 4px 4px #aaa;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    background-color: #aaa;
+}
+#stopwatch-control{
+    text-align: center;
+}
+button{
+    margin: 10px 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: coral;
+    color: black;
+    font-weight: 400;
+    font-size: 1.5em;
+    cursor: pointer;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class createNewUser
+        {
+            constructor(firstName, lastName, birthday)
+            {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.birthday = birthday;
+            }
+            getLogin = () => (`${this.firstName[0]}${this.lastName}`).toLowerCase();
+            getAge() 
+            {
+                let nowDate = new Date();
+                let getNowYear = nowDate.getFullYear();
+                let getUserYear = this.birthday.split('.')[2];
+                let userAge = getNowYear - getUserYear;
+                return userAge;            
+            }
+            getPassword = () => (`${this.firstName[0]}${this.lastName}${this.birthday.split('.')[2]}`).toLowerCase();
+        }
+        
+
+        let newUser = new createNewUser(prompt('Введите имя: ', 'Ivan'), prompt('Введите фамилию: ', 'Petrushkin'), prompt('Введите дату рождения: ', '05.03.1982'));
+        document.write(`Логин пользователя: ${newUser.getLogin()}<br>`);
+        document.write(`Возраст пользователя: ${newUser.getAge()}<br>`);
+        document.write(`Пароль пользователя: ${newUser.getPassword()}<br>`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

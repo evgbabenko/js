@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Calculator()
+        {
+            this.read = function()
+            {
+                this.x = Number(prompt('Введите х:')),
+                this.y = Number(prompt('Введите y:'))
+            },
+            this.sum = function()
+            {
+                /*document.write(`Сумма ${this.x} + ${this.y} = `+ (this.x+this.y));*/
+                return(this.x+this.y);
+            },
+            this.mul = function()
+            {
+                /*document.write(`Произведение ${this.x} * ${this.y} = ` + (this.x * this.y));*/
+                return(this.x*this.y);
+            }
+        }
+
+        let a = new Calculator();
+        a.read();
+        document.write('Произведение: '+a.mul());
+        document.write('<br>');
+        document.write('Сумма: '+a.sum());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

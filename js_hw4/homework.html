@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*Задание 2*/
+        /*
+        function checkAge(age){
+            if (age>18){
+                return true;
+            }else{
+                return confirm('Родители разрешили?');
+            }
+        }*/
+        
+       var check = function(age)
+       {
+            return((age>18)? true : confirm('Родители разрешили?'));
+       }
+       document.write(check(10)+'<br>');
+
+
+
+       /*Задание 1*/
+       let arr1=[1,2,3,4,7,8,9,0,5,3,4,6,2];
+       document.write(arr1.join('; '));
+       document.write('<br>');
+
+       var add = function(arr, arg) /*сложение*/
+        {
+            let result = new Array();
+            for (i=0;i<arr.length;i++)
+            {
+                result[i]=arr[i]+arg;
+            }
+            return result;
+        }
+        var sub = function(arr, arg) /*вычитание*/
+        {
+            let result = new Array();
+            for (i=0;i<arr.length;i++)
+            {
+                result[i]=arr[i]-arg;
+            }
+            return result;
+        }
+        var multi=function(arr, arg) /*умножение*/
+        {
+            let result = new Array();
+            for (i=0;i<arr.length;i++)
+            {
+                result[i]=arr[i]*arg;
+            }
+            return result;
+        }
+        var div = function(arr, arg) /*деление*/
+        {
+            if (arg==0)
+            {
+                return('На ноль делить нельзя!');
+            }
+            else
+            {
+                let result = new Array();
+                for (i=0;i<arr.length;i++)
+                {
+                    result[i]=arr[i]/arg;
+                }
+                return result;
+            }
+        }
+       function map(callBackFunction, arr, arg)
+       {
+        if (!Array.isArray(arr))
+        {
+            document.write('Как аргумент передан не массив');
+        }
+        else
+        {
+            let result = callBackFunction(arr, arg);
+            if (Array.isArray(result)){
+                document.write(result.join('; '));
+            }
+            else
+            {
+                document.write(result);
+            }
+        }
+       }
+    
+       map(div, arr1, 0);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

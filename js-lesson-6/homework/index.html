@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Human
+        {
+            constructor (name, age, sex)
+            {
+            this.name= name;
+            this.age = age;
+            this.sex= sex;
+            }
+            sort = function(arr)
+            {
+                arr.sort();
+            }
+        }
+        function sortsex(arr,sex)
+        {
+            let arr2 = [];
+            let i = 0;
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].sex == sex) {
+                    arr2.push(new Human(arr[i].name, arr[i].age, arr[i].sex));
+                }
+            };
+            arr2.forEach(element => document.write(`Имя: ${element.name}, возраст: ${element.age}, пол:${element.sex}<br>` ));
+        }
+        function inc(p1, p2) {
+            return (p1.age > p2.age) ? 1 : (p1.age < p2.age) ? -1 : 0;
+        }
+        function abc(p1, p2) {
+            return (p1.name > p2.name) ? 1 : (p1.name < p2.name) ? -1 : 0;
+        }
+        
+        let arr =[];
+        arr.push(new Human('Алексей', 19, 'м'));
+        arr.push(new Human('Иван', 39, 'м'));
+        arr.push(new Human('Ирина', 20, 'ж'));
+        arr.push(new Human('Катерина', 24, 'ж'));
+        arr.push(new Human('Петр', 59, 'м'));
+        arr.push(new Human('Кристина', 33, 'ж'));
+        arr.push(new Human('Карина', 19, 'ж'));
+        arr.push(new Human('Андрей', 25, 'м'));
+        arr.push(new Human('Иванна', 43, 'ж'));
+        arr.push(new Human('Тимур', 41, 'м'));
+
+
+
+        arr.sort(inc);
+        arr.forEach(element => document.write(`Имя: ${element.name}, возраст: ${element.age}, пол:${element.sex}<br>`));
+
+        document.write('<br>===== Сортировка по полу =====<br>')
+        sortsex(arr,"м");
+
+        document.write('<br>===== Сортировка по алфавиту =====<br>')
+        arr.sort(abc);
+        arr.forEach(element => document.write(`Имя: ${element.name}, возраст: ${element.age}, пол:${element.sex}<br>`));
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

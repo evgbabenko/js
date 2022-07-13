@@ -1,0 +1,53 @@
+body{
+ background-color: dimgray;
+}
+.slider {
+    background-color: #1e0500;
+    position: relative;
+    width: 1300px;
+    height: 600px;
+    overflow: hidden;
+    margin: 100px auto;
+    background: url('./img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    background-position-x: 0px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    transition: background 0.5s ease;
+}
+#img-slider{
+    visibility: hidden;
+}
+.slider > img {
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+}
+#prev-button {
+    margin: 0px;
+    position: absolute;
+    top: calc(50% - 35px);
+    left:10px;
+    z-index: 3;
+}
+#next-button {
+    margin: 0px;
+    position: absolute;
+    top: calc(50% - 35px);
+    right: 10px;
+    z-index: 3;
+}
+#prev-button:hover, #next-button:hover{
+    cursor: pointer;
+    opacity: .3;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}

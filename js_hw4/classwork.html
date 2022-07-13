@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Вариант 1 
+    <script> 
+        function check(a){
+            if (a==undefined){
+                return(0);
+            }
+            else
+            {
+                return(Number(a));
+            }
+        }
+        function addition(x,y)
+        {
+            return(x+y);
+        }
+        function subtraction(x,y)
+        {
+            return(x-y);
+        }
+        function multiplication(x,y)
+        {
+            return(x*y);
+        }
+        function division(x,y)
+        {
+            return(x/y);
+        }        
+        function calculator(a,b,oper)
+        {   
+            if (arguments.length !==3)
+            {
+                return('Введены не все данные или много!');
+                document.write('Введены не все данные или много!');
+            }
+            else
+            {
+            a=check(a);
+            b=check(b);
+            switch(oper)
+            {
+                case '/':
+                case 'division':
+                    {
+                        if (check(b)==0)
+                        {
+                            alert('На ноль делить нельзя!');
+                            return('На ноль делить нельзя!');
+                            break;
+                        }
+                        else
+                        {
+                            return(division(a,b));
+                            break;
+                        }
+                    }
+                case '+':
+                case 'addition':
+                    {
+                        return(addition(a,b));
+                        break;
+                    }
+                case '*':
+                case 'multiplication':
+                    {
+                        return(multiplication(a,b));
+                        break;
+                    }
+                case '-':
+                case 'subtraction':
+                    {
+                        return(subtraction(a,b));
+                        break;
+                    }
+                default:
+                    {
+                        return('Не задана операция!');
+                        break;
+                    }
+            }
+            }
+        }
+
+        let a=prompt('Введите первое число:');
+        let b=prompt('Введите второе число:');
+        let oper=prompt('введите операцию: addition, subtraction, multiplication, division (словами) или +, -, *, /');
+        document.write('Введено выражение: '+a+' '+oper+' '+b+'<br>');
+        document.write('Ответ: '+calculator(a,b,oper));
+    </script>-->
+
+    <!-- Вариант 2 -->
+    <script>
+        var result=0;
+        var add = function(a,b)
+        {
+            return (a+b);
+        }
+        var sub = function(a,b)
+        {
+            return (a-b);
+        }
+        var multi=function(a,b)
+        {
+            return (a*b);
+        }
+        var div = function(a,b)
+        {
+            if (b==0)
+            {
+                return('На ноль делить нельзя!');
+            }
+            else
+            {
+                return (a/b);
+            }
+        }
+        function calculator (callBackFunction,a,b)
+        {
+            if (arguments.length !==3)
+            {
+                return('Введены не все данные или много!');
+                document.write('Введены не все данные или много!');
+            }
+            else
+            {
+                return(callBackFunction(a,b));
+            }
+        }
+        let a=prompt('Введите первое число:');
+        let b=prompt('Введите второе число:');
+        let oper=prompt('введите операцию: add, sub, multi, div (словами)');
+        document.write('Введено выражение: '+a+' '+oper+' '+b+'<br>');
+        document.write('Ответ: '+calculator(eval(oper),Number(a),Number(b)));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
