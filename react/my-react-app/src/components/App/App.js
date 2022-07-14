@@ -1,10 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Header from '../header/Header';
 import Player from '../Player/Player';
 import Aside from '../Aside/Aside';
 import logo from '../../logo.png';
 import Button from '../Button/Button';
+import banner1 from '../../img/banners/1.png';
+import banner2 from '../../img/banners/2.png';
+import banner3 from '../../img/banners/3.png';
+import banner4 from '../../img/banners/4.png';
+import banner5 from '../../img/banners/5.png';
 
 const menuItems = [
   { name: 'Головна', url: '#' },
@@ -14,12 +19,6 @@ const menuItems = [
   { name: 'Події', url: '#' },
   { name: 'Про радио', url: '#' }
 ]
-
-import banner1 from '../../img/banners/1.png';
-import banner2 from '../../img/banners/2.png';
-import banner3 from '../../img/banners/3.png';
-import banner4 from '../../img/banners/4.png';
-import banner5 from '../../img/banners/5.png';
 
 const banners =  [
   {'id':'1','src':banner1},
